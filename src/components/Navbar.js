@@ -10,8 +10,12 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="nav-center">
           <div className="nav-links">
-            <Link className="nav-link">Home</Link>
-            <Link className="nav-link">All blogs</Link>
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+            <Link to="/blogs" className="nav-link">
+              All blogs
+            </Link>
           </div>
           <button className="nav-btn">
             <FiAlignJustify />
@@ -28,12 +32,15 @@ const Wrapper = styled.section`
     justify-content: center;
     background-color: transparent;
     height: 5rem;
+    z-index: 1;
+    position: relative;
   }
   .nav-center {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 1rem 2rem;
+    max-width: 1170px;
   }
   .nav-links {
     visibility: hidden;
