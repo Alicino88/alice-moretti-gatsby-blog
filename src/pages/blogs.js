@@ -1,19 +1,18 @@
 import React from "react"
-import image from "../assets/images/hero.jpeg"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 
-export default function Home() {
+const Blogs = () => {
   return (
     <Layout>
       <div>
         <Hero
-          title="Hello you reader, welcome to my blog"
+          title="all blogs"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-          homePic
         />
       </div>
     </Layout>
   )
 }
+
+export default Blogs
