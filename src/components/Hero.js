@@ -12,9 +12,11 @@ const Hero = ({ title, subtitle, homePic }) => {
             <h1>{title}</h1>
             <h3>{subtitle}</h3>
           </div>
-          {homePic && (
-            <img src={picture} alt="girl coding" className="header-pic" />
-          )}
+          <div className="picture-container">
+            {homePic && (
+              <img src={picture} alt="girl coding" className="header-pic" />
+            )}
+          </div>
         </div>
       </header>
     </Wrapper>
@@ -41,14 +43,14 @@ const Wrapper = styled.section`
   }
 
   .text-container {
-    width: 40%;
+    width: 90%;
   }
 
   h1 {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 1.8rem;
     line-height: 43px;
     text-transform: uppercase;
     color: #3e3e3e;
@@ -59,16 +61,52 @@ const Wrapper = styled.section`
     font-family: Playfair Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 1.5rem;
     line-height: 40px;
     color: #3e3e3e;
   }
 
   .header-pic {
-    width: 900px;
-    position: absolute;
-    right: 40px;
-    bottom: -45px;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .text-container {
+      width: 70%;
+    }
+    .header-pic {
+      display: block;
+      width: 500px;
+      position: absolute;
+      right: 40px;
+      bottom: 0px;
+      z-index: -1;
+    }
+
+    @media (min-width: 900px) {
+      .text-container {
+        width: 40%;
+      }
+      .header-pic {
+        z-index: 0;
+        bottom: 0px;
+      }
+
+      @media (min-width: 1170px) {
+        .header-pic {
+          width: 600px;
+        }
+        .picture-container {
+          width: 60%;
+        }
+      }
+      @media (min-width: 1440px) {
+        .header-pic {
+          width: 700px;
+          margin-right: 50px;
+        }
+      }
+    }
   }
 `
 export default Hero
