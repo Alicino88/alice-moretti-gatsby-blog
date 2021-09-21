@@ -9,6 +9,7 @@ const Blogs = () => {
         <Hero
           title="all blogs"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          blogsPic
         />
       </div>
     </Layout>
