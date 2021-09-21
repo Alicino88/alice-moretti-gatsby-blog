@@ -10,10 +10,14 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="nav-center">
           <div className="nav-links">
-            <Link to="/" className="nav-link">
+            <Link to="/" className="nav-link" activeClassName="active-link">
               Home
             </Link>
-            <Link to="/blogs" className="nav-link">
+            <Link
+              to="/blogs"
+              className="nav-link"
+              activeClassName="active-link"
+            >
               All blogs
             </Link>
           </div>
@@ -50,6 +54,12 @@ const Wrapper = styled.section`
     margin-right: 2rem;
     font-family: Lato;
     color: #3e3e3e;
+    text-decoration: none;
+  }
+
+  .active-link {
+    border-bottom: 4px solid #d4b499;
+    padding-bottom: 5px;
   }
 
   .nav-btn {
