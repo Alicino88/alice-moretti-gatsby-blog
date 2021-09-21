@@ -8,14 +8,16 @@ const Hero = ({ title, subtitle, homePic }) => {
     <Wrapper>
       <header className="header-style">
         <div className="header-center">
-          <div className="text-container">
-            <h1>{title}</h1>
-            <h3>{subtitle}</h3>
-          </div>
-          <div className="picture-container">
-            {homePic && (
-              <img src={picture} alt="girl coding" className="header-pic" />
-            )}
+          <div>
+            <div className="text-container">
+              <h1>{title}</h1>
+              <h3>{subtitle}</h3>
+            </div>
+            <div className="picture-container">
+              {homePic && (
+                <img src={picture} alt="girl coding" className="header-pic" />
+              )}
+            </div>
           </div>
         </div>
       </header>
@@ -25,13 +27,12 @@ const Hero = ({ title, subtitle, homePic }) => {
 const Wrapper = styled.section`
   .header-style {
     background-color: rgba(194, 205, 214, 0.5);
-    height: 60vh;
+    height: 70vh;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 
@@ -40,6 +41,8 @@ const Wrapper = styled.section`
     max-width: 1170px;
     padding: 2rem;
     display: flex;
+    align-items: center;
+    position: relative;
   }
 
   .text-container {
@@ -84,9 +87,6 @@ const Wrapper = styled.section`
     }
 
     @media (min-width: 900px) {
-      .text-container {
-        width: 40%;
-      }
       .header-pic {
         z-index: 0;
         bottom: 0px;
@@ -94,7 +94,7 @@ const Wrapper = styled.section`
 
       @media (min-width: 1170px) {
         .header-pic {
-          width: 600px;
+          width: 700px;
         }
         .picture-container {
           width: 60%;
@@ -102,8 +102,8 @@ const Wrapper = styled.section`
       }
       @media (min-width: 1440px) {
         .header-pic {
-          width: 700px;
-          margin-right: 50px;
+          right: 0;
+          width: 800px;
         }
       }
     }
