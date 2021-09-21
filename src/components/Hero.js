@@ -3,21 +3,29 @@ import styled from "styled-components"
 import picture from "../assets/images/hp_pic.svg"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Hero = ({ title, subtitle, homePic }) => {
+const Hero = ({ title, subtitle, homePic, blogsPic }) => {
   return (
     <Wrapper>
       <header className="header-style">
+        {blogsPic && (
+          <StaticImage
+            src="../assets/images/hero.jpeg"
+            alt="hands on computer"
+            className="blogs-pic"
+            placeholder="tracedSVG"
+            //by adding the layout property the image became visible also on small screens
+            layout="fullWidth"
+          />
+        )}
         <div className="header-center">
           <div>
             <div className="text-container">
               <h1>{title}</h1>
               <h3>{subtitle}</h3>
             </div>
-            <div className="picture-container">
-              {homePic && (
-                <img src={picture} alt="girl coding" className="header-pic" />
-              )}
-            </div>
+            {homePic && (
+              <img src={picture} alt="girl coding" className="header-pic" />
+            )}
           </div>
         </div>
       </header>
@@ -34,6 +42,16 @@ const Wrapper = styled.section`
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  .blogs-pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+    opacity: 0.4;
   }
 
   .header-center {
