@@ -56,11 +56,12 @@ const Wrapper = styled.section`
 
   .header-center {
     width: 100%;
-    max-width: 1170px;
+    max-width: px;
     padding: 2rem;
     display: flex;
     align-items: center;
     position: relative;
+    max-width: 1270px;
   }
 
   .text-container {

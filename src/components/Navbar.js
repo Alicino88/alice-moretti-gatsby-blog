@@ -44,7 +44,7 @@ const Wrapper = styled.section`
     justify-content: space-between;
     width: 100%;
     padding: 1rem 2rem;
-    max-width: 1170px;
+    max-width: 1270px;
   }
   .nav-links {
     visibility: hidden;
