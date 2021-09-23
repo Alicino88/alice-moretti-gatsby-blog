@@ -35,6 +35,8 @@ const Wrapper = styled.section`
   .aboutContainer {
     text-align: center;
     padding: 0 2.3rem;
+    width: 320px;
+    margin: auto;
   }
 
   .title-container {
@@ -57,8 +59,8 @@ const Wrapper = styled.section`
     display: flex;
     width: 30%;
     margin: auto;
-    justify-content: space-between;
-    margin-top: 1rem;
+    justify-content: space-around;
+    margin-top: 1.5rem;
   }
   .icon-container svg {
     font-size: 1.5rem;
