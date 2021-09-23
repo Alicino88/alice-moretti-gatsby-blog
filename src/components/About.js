@@ -19,12 +19,23 @@ const About = () => {
           className="image-style"
         />
         <p>
-          I am Alice, a frontend developer who enjoys writing about coding
-          related topics
+          I am Alice, a{" "}
+          <a href="https://www.alicemoretti.com/" target="_blank">
+            frontend developer
+          </a>{" "}
+          who enjoys writing about coding related topics
         </p>
         <div className="icon-container">
-          <FaGithub />
-          <FaLinkedin />
+          <a
+            href="
+    https://github.com/Alicino88?tab=repositories"
+            target="_blank"
+          >
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/alicemoretti/" target="_blank">
+            <FaLinkedin />
+          </a>
         </div>
       </section>
     </Wrapper>
