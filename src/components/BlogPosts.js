@@ -19,7 +19,7 @@ const query = graphql`
         picture {
           gatsbyImageData(
             layout: CONSTRAINED
-            placeholder: TRACED_SVG
+            placeholder: BLURRED
             width: 436
             height: 369
           )
@@ -46,6 +46,7 @@ const BlogPosts = () => {
               <GatsbyImage
                 image={pathToImage}
                 alt="data travelling"
+                style={{ "border-radius": "5px" }}
               ></GatsbyImage>
               <div className="text-container">
                 <div className="topic-container">
