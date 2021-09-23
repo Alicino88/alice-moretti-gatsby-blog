@@ -14,28 +14,47 @@ const SeeAllBtn = () => {
 }
 
 const Wrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   .btn-style {
-    background: transparent;
+    background: #3678ab;
     border: 1px solid #3678ab;
     box-sizing: border-box;
     border-radius: 10px;
-    color: #3678ab;
-    padding: 0.8rem 1.5rem;
+    color: #ffff;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
   }
 
-  .btn-style:hover {
-    background: rgba(194, 205, 214, 0.5);
-  }
   .see-all-text {
     font-family: Lato;
     font-size: 18px;
     text-transform: uppercase;
-    color: #3678ab;
+
+    color: #ffff;
   }
   .arrow-style {
     font-size: 2rem;
+  }
+
+  @media (min-width: 1176px) {
+    display: block;
+    .btn-style {
+      padding: 0.8rem 1.5rem;
+      background: transparent;
+      color: #3678ab;
+    }
+
+    .see-all-text {
+      color: #3678ab;
+    }
+
+    .btn-style:hover {
+      background: rgba(194, 205, 214, 0.5);
+    }
   }
 `
 
