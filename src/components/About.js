@@ -56,16 +56,6 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
   }
 
-  .line {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    width: 100%;
-    height: 1.5px;
-    transform: translateY(-50%);
-    background: hsla(206, 52%, 44%, 1);
-    z-index: -1;
-  }
   .icon-container {
     display: flex;
     width: 30%;
