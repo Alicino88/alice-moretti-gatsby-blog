@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 //icons from https://react-icons.github.io/react-icons/
 import { FiAlignJustify } from "react-icons/fi"
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <Wrapper>
       <nav className="navbar">
@@ -21,7 +21,9 @@ const Navbar = () => {
               All blogs
             </Link>
           </div>
-          <button className="nav-btn">
+          {/*when clicking on the button, the toggle function is fired. This function, defined inside the 
+          Layout component toggles between open and close state for the SideBar. */}
+          <button className="nav-btn" onClick={toggle}>
             <FiAlignJustify />
           </button>
         </div>
@@ -67,7 +69,7 @@ const Wrapper = styled.section`
     border: none;
   }
   .nav-btn svg {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #3e3e3e;
   }
 
