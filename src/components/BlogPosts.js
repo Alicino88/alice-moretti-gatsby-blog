@@ -84,12 +84,6 @@ const Wrapper = styled.section`
     width: 100%;
   }
 
-  .topic-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-
   .text-container {
     padding: 2rem 1rem 4rem 1rem;
     text-align: center;
