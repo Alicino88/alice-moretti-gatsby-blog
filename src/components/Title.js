@@ -15,7 +15,7 @@ const Wrapper = styled.section`
   .title-container {
     position: relative;
     width: 200px;
-    margin: auto;
+    margin: 0 auto 2rem auto;
     text-align: center;
   }
   .title-style {
