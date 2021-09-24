@@ -1,14 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 import { FiArrowRight } from "react-icons/fi"
+import { Link } from "gatsby"
 
 const SeeAllBtn = () => {
   return (
     <Wrapper>
-      <button className="btn-style">
-        <p className="see-all-text">see all</p>
-        <FiArrowRight className="arrow-style" />
-      </button>
+      <Link to="/blogs" style={{ "text-decoration": "none" }}>
+        <button className="btn-style">
+          <p className="see-all-text">see all</p>
+          <FiArrowRight className="arrow-style" />
+        </button>
+      </Link>
     </Wrapper>
   )
 }
@@ -24,9 +27,10 @@ const Wrapper = styled.section`
     box-sizing: border-box;
     border-radius: 10px;
     color: #ffff;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .see-all-text {
