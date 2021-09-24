@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Title from "../components/Title"
+import Topics from "../components/Topics"
 
 const Blogs = () => {
   return (
@@ -14,6 +15,7 @@ const Blogs = () => {
         />
         <div className="main-container-blogs">
           <Title />
+          <Topics />
         </div>
       </div>
     </Layout>
