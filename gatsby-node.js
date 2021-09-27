@@ -3,6 +3,7 @@ const path = require("path")
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
+  //the query below allows to get an array with all the topics (mentioned only once without repetitions)
   const result = await graphql(`
     query GetTopics {
       allContentfulBlog {
