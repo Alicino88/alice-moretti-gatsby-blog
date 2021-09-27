@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Title from "../components/Title"
 import Topics from "../components/Topics"
+import AllBlogPosts from "../components/AllBlogPosts"
 
 const Blogs = () => {
   return (
@@ -16,6 +17,7 @@ const Blogs = () => {
         <div className="main-container-blogs">
           <Title />
           <Topics />
+          <AllBlogPosts />
         </div>
       </div>
     </Layout>

@@ -7,7 +7,10 @@ import SeeAllBtn from "../components/SeeAllBtn"
 
 const query = graphql`
   {
-    allContentfulBlog(sort: { fields: date, order: DESC }) {
+    allContentfulBlog(
+      sort: { fields: date, order: DESC }
+      filter: { featured: { eq: true } }
+    ) {
       nodes {
         date(formatString: "MMMM Do, YYYY")
         featured
@@ -104,28 +107,17 @@ const Wrapper = styled.section`
     margin-bottom: 20px;
   }
 
-  .date-container {
-    border-top: 2px solid hsla(207, 20%, 80%, 0.5);
-    margin-top: 2rem;
-    padding-top: 0.5rem;
-  }
-
   .topic-container {
     display: flex;
     margin-bottom: 1rem;
   }
 
-  h1 {
-    color: hsl(206 54% 29%);
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2rem;
+  @media only screen and (max-width: 939px) {
+    .continue-reading-container {
+      justify-content: center;
+    }
   }
 
-  p {
-    font-size: 1rem;
-  }
   @media (min-width: 700px) {
     h1 {
       font-size: 1.5rem;
@@ -156,10 +148,6 @@ const Wrapper = styled.section`
     .text-container {
       padding: 1rem 2rem;
       text-align: left;
-    }
-
-    .continue-reading-container {
-      margin-left: 0;
     }
 
     .date-container {
