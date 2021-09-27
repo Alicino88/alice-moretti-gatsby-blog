@@ -41,7 +41,11 @@ const AllBlogPosts = () => {
           const pathToImage = getImage(blog.picture)
           return (
             <article className="article-container">
-              <GatsbyImage image={pathToImage} placeholder="blurred" />
+              <GatsbyImage
+                image={pathToImage}
+                placeholder="blurred"
+                className="picture-style"
+              />
               <div className="text-container">
                 <h1 className="title-style">{blog.title}</h1>
                 <p>{blog.textPreview.textPreview}</p>
@@ -67,19 +71,27 @@ const Wrapper = styled.section`
   .blog-container {
     width: 100%;
     max-width: 1270px;
-    padding: 2rem;
+    padding: 1.2rem;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+    justify-content: center;
   }
 
   .article-container {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
   }
+
+  .picture-style {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px 10px 0 0;
+  }
   .text-container {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .title-style {
