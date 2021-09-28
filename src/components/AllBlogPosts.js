@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FiArrowRight } from "react-icons/fi"
 import styled from "styled-components"
 
+/*
 const query = graphql`
   {
     allContentfulBlog(sort: { fields: date, order: DESC }) {
@@ -27,13 +28,14 @@ const query = graphql`
     }
   }
 `
+*/
 
-const AllBlogPosts = () => {
-  const data = useStaticQuery(query)
+const AllBlogPosts = ({ blogs }) => {
+  /*const data = useStaticQuery(query)
   const {
     allContentfulBlog: { nodes: blogs },
   } = data
-  console.log(blogs)
+  console.log(blogs)*/
   return (
     <Wrapper>
       <div className="blog-container">

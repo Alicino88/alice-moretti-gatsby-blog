@@ -4,8 +4,12 @@ import Hero from "../components/Hero"
 import Title from "../components/Title"
 import Topics from "../components/Topics"
 import AllBlogPosts from "../components/AllBlogPosts"
+import { graphql, useStaticQuery } from "gatsby"
 
-const Blogs = () => {
+const Blogs = ({ data }) => {
+  const {
+    allContentfulBlog: { nodes: blogs },
+  } = data
   return (
     <Layout>
       <div>
@@ -17,11 +21,35 @@ const Blogs = () => {
         <div className="main-container-blogs">
           <Title />
           <Topics />
-          <AllBlogPosts />
+          <AllBlogPosts blogs={blogs} />
         </div>
       </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulBlog(sort: { fields: date, order: DESC }) {
+      nodes {
+        date(formatString: "MMMM Do, YYYY")
+        id
+        title
+        topics
+        textPreview {
+          textPreview
+        }
+        picture {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            width: 436
+            height: 369
+          )
+        }
+      }
+    }
+  }
+`
 
 export default Blogs
