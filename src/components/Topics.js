@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import setupTopics from "../utils/setupTopics"
+import { Link } from "gatsby"
 
 const query = graphql`
   {
@@ -25,7 +26,11 @@ const Topics = () => {
   return (
     <div className="topic-container">
       {newTopics.map(topic => {
-        return <button className="btn-topic">{topic}</button>
+        return (
+          <Link to={`/blogs/${topic}`}>
+            <button className="btn-topic">{topic}</button>
+          </Link>
+        )
       })}
     </div>
   )
