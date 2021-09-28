@@ -13,10 +13,12 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   console.log(result)
 
+  //for each topic a page is created using the topic-template.js file as a base
   result.data.allContentfulBlog.distinct.forEach(topic => {
     //const topicSlug = slugify(topic, { lower: true })
+    //createPage is a function taking an object as a parameter containing path, component, context
     createPage({
-      path: `/topics/${topic}`,
+      path: `/blogs/${topic}`,
       component: path.resolve(`src/templates/topic-template.js`),
       context: {
         topic: topic,
