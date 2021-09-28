@@ -25,6 +25,9 @@ const Topics = () => {
   const newTopics = setupTopics(blogs)
   return (
     <div className="topic-container">
+      <Link to={`/blogs`}>
+        <button className="btn-topic">All</button>
+      </Link>
       {newTopics.map(topic => {
         return (
           <Link to={`/blogs/${topic}`}>
