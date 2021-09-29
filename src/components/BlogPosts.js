@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { FiArrowRight } from "react-icons/fi"
 import SeeAllBtn from "../components/SeeAllBtn"
+import { Link } from "gatsby"
 
 const query = graphql`
   {
@@ -59,7 +60,10 @@ const BlogPosts = () => {
                     return <button className="btn-topic">{topic}</button>
                   })}
                 </div>
-                <h1 className="title-style">{blog.title}</h1>
+                <Link to={`/${blog.title}`}>
+                  <h1 className="title-style">{blog.title}</h1>
+                </Link>
+
                 <div className="underline"></div>
                 <p>{blog.textPreview.textPreview}</p>
 
