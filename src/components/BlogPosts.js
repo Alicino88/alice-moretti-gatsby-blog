@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { FiArrowRight } from "react-icons/fi"
 import SeeAllBtn from "../components/SeeAllBtn"
 import { Link } from "gatsby"
+import slugify from "slugify"
 
 const query = graphql`
   {
@@ -17,6 +18,7 @@ const query = graphql`
         featured
         id
         title
+        slug
         topics
         textPreview {
           textPreview
@@ -60,7 +62,7 @@ const BlogPosts = () => {
                     return <button className="btn-topic">{topic}</button>
                   })}
                 </div>
-                <Link to={`/${blog.title}`}>
+                <Link to={`/${blog.slug}`}>
                   <h1 className="title-style">{blog.title}</h1>
                 </Link>
 

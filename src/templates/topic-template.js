@@ -41,6 +41,7 @@ export const query = graphql`
         date(formatString: "MMMM Do, YYYY")
         id
         title
+        slug
         topics
         textPreview {
           textPreview

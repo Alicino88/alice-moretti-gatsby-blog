@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FiArrowRight } from "react-icons/fi"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 /*
 const query = graphql`
@@ -49,7 +50,9 @@ const AllBlogPosts = ({ blogs }) => {
                 className="picture-style"
               />
               <div className="text-container">
-                <h1 className="title-style">{blog.title}</h1>
+                <Link to={`/${blog.slug}`}>
+                  <h1 className="title-style">{blog.title}</h1>
+                </Link>
                 <p>{blog.textPreview.textPreview}</p>
                 <div className="continue-reading-container">
                   <p className="continue-reading-text">Continue reading</p>

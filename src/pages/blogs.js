@@ -4,7 +4,7 @@ import Hero from "../components/Hero"
 import Title from "../components/Title"
 import Topics from "../components/Topics"
 import AllBlogPosts from "../components/AllBlogPosts"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 const Blogs = ({ data }) => {
   const {
@@ -35,6 +35,7 @@ export const query = graphql`
         date(formatString: "MMMM Do, YYYY")
         id
         title
+        slug
         topics
         textPreview {
           textPreview
