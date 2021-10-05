@@ -5,12 +5,12 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 //when creating a page programmatically using gatsby file system route API
-//gatsby passes a lot of useful information (props) we can see by console log the.
+//gatsby passes all the data as props. We can see this data by console log them.
 const SingleBlog = props => {
   console.log(props)
 
-  //you need to pass to renderRichText function not the raw property but the piece that contains it!
-  const raw = props.data.contentfulBlog.content
+  //you need to pass to renderRichText function not the raw object itself but the piece that contains it!
+  const content = props.data.contentfulBlog.content
 
   const options = {
     renderNode: {
@@ -23,7 +23,7 @@ const SingleBlog = props => {
 
   //renderRichText takes the object containing the raw content and the options defining styles and additional
   //assets such as pictures
-  const blog = renderRichText(raw, options)
+  const blog = renderRichText(content, options)
 
   return <div>{blog}</div>
 }
@@ -32,8 +32,10 @@ const SingleBlog = props => {
 references {
         children {
           ... on ContentfulAsset {
-
+Also "contentful_id" "__typename" are necessary to access the data and render them
+The documentation was very little on the topic:
 https://www.gatsbyjs.com/plugins/gatsby-source-contentful/
+https://www.contentful.com/developers/docs/tutorials/general/rich-text-and-gatsby/
 */
 export const query = graphql`
   query getSingleBlog($slug: String) {
