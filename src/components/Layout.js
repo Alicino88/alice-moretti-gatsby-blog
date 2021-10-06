@@ -1,5 +1,6 @@
 import React from "react"
 import Navbar from "./Navbar"
+import Footer from "../components/Footer"
 import SideBar from "./SideBar"
 import "../assets/css/main.css"
 
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
       <Navbar toggle={toggle} />
       <SideBar toggle={toggle} isOpen={isOpen} />
       <div className="content">{children}</div>
+      <Footer />
     </div>
   )
 }
