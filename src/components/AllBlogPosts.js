@@ -1,16 +1,10 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FiArrowRight } from "react-icons/fi"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
 const AllBlogPosts = ({ blogs }) => {
-  /*const data = useStaticQuery(query)
-  const {
-    allContentfulBlog: { nodes: blogs },
-  } = data
-  console.log(blogs)*/
   return (
     <Wrapper>
       <div className="blog-container">

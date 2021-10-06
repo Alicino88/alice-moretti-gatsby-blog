@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { FiArrowRight } from "react-icons/fi"
 import SeeAllBtn from "../components/SeeAllBtn"
 import { Link } from "gatsby"
-import slugify from "slugify"
 
 const query = graphql`
   {

@@ -1,9 +1,27 @@
+//to render the rich text field from Contentful it was necessary to use the renderRichText method
+//together with the "@contentful/rich-text-types" package.
+//Overall the steps are:
+//1.Fetching the raw content
+//2.Render it with renderRichText
+//3.style it using BLOCKS and MARKS
+
 import React from "react"
 import { graphql } from "gatsby"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Layout from "../components/Layout"
+
+//By creating the page {ContentfulBlog.slug}.js Gatsby creates automatically a page for each slug
+//file system route API has been used for this https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
+//I haven't used the slugify package as Gatbsy uses sindresorhus/slugify to create the slug in {ContentfulBlog.slug}.js
+//which works with a different logic other than slugify. Instead, I have created a slug field in Contentful.
+
+//For example, in BlogPosts.js, to create a Link to the single blog page,
+//I used "Link to={`/${blog.slug}`}"", the slug is "matched" to the one of {ContentfulBlog.slug}.js
+//and slug is also passed as variable to the query.
+//This allows to fetch the content only for that specific blog post.
 
 //when creating a page programmatically using gatsby file system route API
 //gatsby passes all the data as props. We can see this data by console log them.
@@ -56,21 +74,24 @@ const SingleBlog = props => {
   const date = props.data.contentfulBlog.date
   const pathToImage = getImage(props.data.contentfulBlog.picture)
   return (
-    <Wrapper>
-      <div>
-        <div className="header-background"></div>
-        <article className="article-container">
-          <h1 className="title-style">{title}</h1>
-          <p className="small-text">{date}</p>
-          <GatsbyImage className="blog-main-picture" image={pathToImage} />
-          <div>{blog}</div>
-        </article>
-      </div>
-    </Wrapper>
+    <Layout>
+      <Wrapper>
+        <div>
+          <div className="header-background"></div>
+          <article className="article-container">
+            <h1 className="title-style">{title}</h1>
+            <p className="small-text">{date}</p>
+            <GatsbyImage className="blog-main-picture" image={pathToImage} />
+            <div>{blog}</div>
+          </article>
+        </div>
+      </Wrapper>
+    </Layout>
   )
 }
 
-/*it seems that the key to fetch the images was to manually remove the children node from the query:
+/*it seems that the key to fetch the images (ContentfulAsset) was to manually remove the children 
+node from the query:
 references {
         children {
           ... on ContentfulAsset {
@@ -179,15 +200,7 @@ const Wrapper = styled.section`
 
   //Raw content style:
   .h2-style {
-    color: hsl(206, 54%, 29%);
-    margin: 20px 0 0 0;
-    font-family: Lato;
-  }
-
-  .h4-style {
-    font-family: Lato;
-    font-size: 1.2rem;
-    color: hsla(0, 0%, 24%, 1);
+    font-size: 1.5rem;
   }
 
   .paragraph-style {

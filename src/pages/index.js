@@ -14,6 +14,8 @@ export default function Home() {
           homePic
         />
         <div className="main-container">
+          {/*BlogPosts contains StaticQuery to fetch the 3 featured blog posts */}
+
           <BlogPosts />
           <About />
         </div>
