@@ -69,9 +69,6 @@ const Wrapper = styled.section`
   }
 
   h1 {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
     font-size: 1.8rem;
     line-height: 43px;
     text-transform: uppercase;
@@ -81,7 +78,6 @@ const Wrapper = styled.section`
 
   h3 {
     font-family: Playfair Display;
-    font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 40px;

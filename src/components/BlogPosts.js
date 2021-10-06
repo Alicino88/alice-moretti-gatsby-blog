@@ -62,19 +62,19 @@ const BlogPosts = () => {
                     return <button className="btn-topic">{topic}</button>
                   })}
                 </div>
-                <Link to={`/${blog.slug}`}>
-                  <h1 className="title-style">{blog.title}</h1>
-                </Link>
+
+                <h1 className="title-style">{blog.title}</h1>
 
                 <div className="underline"></div>
                 <p>{blog.textPreview.textPreview}</p>
-
-                <div className="continue-reading-container">
-                  <p className="continue-reading-text">Continue reading</p>
-                  <button className="btn-arrow">
-                    <FiArrowRight />
-                  </button>
-                </div>
+                <Link to={`/${blog.slug}`} className="link">
+                  <div className="continue-reading-container">
+                    <p className="continue-reading-text">Continue reading</p>
+                    <button className="btn-arrow">
+                      <FiArrowRight />
+                    </button>
+                  </div>
+                </Link>
                 <footer className="date-container">
                   <p className="date">{blog.date}</p>
                 </footer>

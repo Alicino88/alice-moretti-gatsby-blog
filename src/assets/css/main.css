@@ -18,6 +18,7 @@
   border-radius: 10px;
   padding: 0.5rem 1rem;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 h1 {
@@ -37,11 +38,15 @@ p {
   color: hsla(0, 0%, 24%, 1);
 }
 
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
 .continue-reading-text {
   font-family: Lato;
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
   text-transform: uppercase;
   color: hsl(27, 41%, 72%);
 }

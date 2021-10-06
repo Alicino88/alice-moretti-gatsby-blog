@@ -30,7 +30,7 @@ const Topics = () => {
       </Link>
       {newTopics.map(topic => {
         return (
-          <Link to={`/blogs/${topic}`}>
+          <Link to={`/blogs/${topic}`} className="link">
             <button className="btn-topic">{topic}</button>
           </Link>
         )

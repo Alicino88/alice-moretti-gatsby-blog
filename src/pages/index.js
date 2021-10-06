@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <div>
         <Hero
-          title="Hello you reader, welcome to my blog"
+          title="Hello visitor! Welcome to my blog"
           subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
           homePic
         />

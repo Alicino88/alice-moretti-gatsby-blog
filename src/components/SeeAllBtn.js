@@ -23,7 +23,7 @@ const Wrapper = styled.section`
   margin-bottom: 5rem;
   .btn-style {
     background: #3678ab;
-    border: 1px solid #3678ab;
+    border: 2px solid #3678ab;
     box-sizing: border-box;
     border-radius: 10px;
     color: #ffff;
@@ -35,7 +35,7 @@ const Wrapper = styled.section`
 
   .see-all-text {
     font-family: Lato;
-    font-size: 18px;
+    font-size: 1rem;
     text-transform: uppercase;
 
     color: #ffff;
@@ -47,7 +47,7 @@ const Wrapper = styled.section`
   @media (min-width: 1176px) {
     display: block;
     .btn-style {
-      padding: 0.8rem 1.5rem;
+      padding: 0.7rem 1.4rem;
       background: transparent;
       color: #3678ab;
     }

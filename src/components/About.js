@@ -70,9 +70,8 @@ const Wrapper = styled.section`
 
   h3 {
     font-family: Lato;
-    font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1rem;
     text-transform: uppercase;
     color: hsla(206, 54%, 29%, 1);
     background-color: #ffff;
