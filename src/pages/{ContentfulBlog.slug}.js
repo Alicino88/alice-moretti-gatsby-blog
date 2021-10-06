@@ -15,18 +15,36 @@ const SingleBlog = props => {
 
   //styling raw content:
   const HeaderTwo = ({ children }) => <h2 className="h2-style">{children}</h2>
+  const HeaderFour = ({ children }) => <h4 className="h4-style">{children}</h4>
   const Code = ({ children }) => <span className="code-style">{children}</span>
+  const Bold = ({ children }) => <span className="bold-style">{children}</span>
+  const Paragraph = ({ children }) => (
+    <p className="paragraph-style">{children}</p>
+  )
 
   const options = {
     renderMark: {
       [MARKS.CODE]: text => <Code>{text}</Code>,
+      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
     },
     renderNode: {
       [BLOCKS.HEADING_2]: (node, children) => <HeaderTwo>{children}</HeaderTwo>,
-
+      [BLOCKS.HEADING_4]: (node, children) => (
+        <HeaderFour>{children}</HeaderFour>
+      ),
+      [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
+      //Embedded_asset are the pictures contained inside the blog
       [BLOCKS.EMBEDDED_ASSET]: node => {
+        console.log(node)
         console.log(node.data.target.fixed.src)
-        return <img src={node.data.target.fixed.src} />
+        return (
+          <div className="picture-container">
+            <img src={node.data.target.fixed.src} className="blog-pic" />
+            <p className="small-text" style={{ textAlign: "center" }}>
+              {node.data.target.description}
+            </p>
+          </div>
+        )
       },
     },
   }
@@ -43,8 +61,8 @@ const SingleBlog = props => {
         <div className="header-background"></div>
         <article className="article-container">
           <h1 className="title-style">{title}</h1>
-          <p className="paragraph-style">{date}</p>
-          <GatsbyImage className="blog-picture" image={pathToImage} />
+          <p className="small-text">{date}</p>
+          <GatsbyImage className="blog-main-picture" image={pathToImage} />
           <div>{blog}</div>
         </article>
       </div>
@@ -98,11 +116,51 @@ const Wrapper = styled.section`
     height: 400px;
   }
 
-  .article-container {
-    //padding: 0 400px 0 400px;
-    width: 40vw;
-    margin: 0 auto;
-    margin-top: -250px;
+  @media (min-width: 330px) {
+    .article-container {
+      width: 85vw;
+      margin: 0 auto;
+      margin-top: -250px;
+    }
+    .blog-main-picture {
+      border-radius: 10px 10px 0 0;
+      height: 200px;
+    }
+    .code-style {
+      display: block;
+      font-weight: 300;
+      font-size: 0.8rem;
+      font-family: Source Code Pro;
+      background-color: hsla(206, 20%, 80%, 0.23);
+      padding: 20px 50px 20px 20px;
+      line-height: 1.3;
+    }
+  }
+
+  @media (min-width: 520px) {
+    .code-style {
+      padding: 20px 150px 20px 20px;
+    }
+  }
+  @media (min-width: 800px) {
+    .article-container {
+      width: 70vw;
+    }
+    .blog-main-picture {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: 1230px) {
+    .article-container {
+      width: 45vw;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .article-container {
+      width: 40vw;
+    }
   }
 
   .title-style {
@@ -113,25 +171,41 @@ const Wrapper = styled.section`
     margin-bottom: 10px;
   }
 
-  .paragraph-style {
+  .small-text {
     font-family: "Lato";
     margin-bottom: 10px;
     font-size: 0.8rem;
   }
 
-  .blog-picture {
-    border-radius: 10px 10px 0 0;
-    height: 400px;
-  }
   //Raw content style:
   .h2-style {
     color: hsl(206, 54%, 29%);
-    margin: 20px 0 20px 0;
+    margin: 20px 0 0 0;
     font-family: Lato;
   }
 
-  .code-style {
-    display: block;
+  .h4-style {
+    font-family: Lato;
+    font-size: 1.2rem;
+    color: hsla(0, 0%, 24%, 1);
+  }
+
+  .paragraph-style {
+    margin-bottom: 20px;
+  }
+
+  .bold-style {
+    font-weight: bold;
+    color: hsla(0, 0%, 24%, 1);
+  }
+
+  .picture-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-pic {
+    margin: auto;
+    width: 300px;
   }
 `
 
