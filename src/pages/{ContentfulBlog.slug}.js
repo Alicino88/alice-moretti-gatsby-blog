@@ -7,7 +7,7 @@
 
 import React from "react"
 import { graphql } from "gatsby"
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -39,6 +39,7 @@ const SingleBlog = props => {
   const Paragraph = ({ children }) => (
     <p className="paragraph-style">{children}</p>
   )
+  const Hyperlink = ({ children }) => <span target="_blank">{children}</span>
 
   const options = {
     renderMark: {
@@ -46,6 +47,9 @@ const SingleBlog = props => {
       [MARKS.BOLD]: text => <Bold>{text}</Bold>,
     },
     renderNode: {
+      [INLINES.ENTRY_HYPERLINK]: (node, children) => (
+        <Hyperlink>{children}</Hyperlink>
+      ),
       [BLOCKS.HEADING_2]: (node, children) => <HeaderTwo>{children}</HeaderTwo>,
       [BLOCKS.HEADING_4]: (node, children) => (
         <HeaderFour>{children}</HeaderFour>
@@ -57,7 +61,7 @@ const SingleBlog = props => {
         //console.log(node.data.target.fixed.src)
         return (
           <div className="picture-container">
-            <img src={node.data.target.fixed.src} className="blog-pic" />
+            <img src={node.data.target.fixed.src} className="blog-pic" alt="" />
             <p className="small-text" style={{ textAlign: "center" }}>
               {node.data.target.description}
             </p>
@@ -81,7 +85,11 @@ const SingleBlog = props => {
           <article className="article-container">
             <h1 className="title-style">{title}</h1>
             <p className="small-text">{date}</p>
-            <GatsbyImage className="blog-main-picture" image={pathToImage} />
+            <GatsbyImage
+              className="blog-main-picture"
+              image={pathToImage}
+              alt=""
+            />
             <div>{blog}</div>
           </article>
         </div>
@@ -146,6 +154,7 @@ const Wrapper = styled.section`
     .blog-main-picture {
       border-radius: 10px 10px 0 0;
       height: 200px;
+      margin-bottom: 40px;
     }
     .code-style {
       display: block;
@@ -155,6 +164,8 @@ const Wrapper = styled.section`
       background-color: hsla(206, 20%, 80%, 0.23);
       padding: 20px 50px 20px 20px;
       line-height: 1.3;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
   }
 
@@ -209,7 +220,6 @@ const Wrapper = styled.section`
 
   .bold-style {
     font-weight: bold;
-    color: hsla(0, 0%, 24%, 1);
   }
 
   .picture-container {
