@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-container">
         Copyright&nbsp; <span> Alice Moretti </span>&nbsp; - 2021 | Built
         with&nbsp;
-        <a href="https://www.gatsbyjs.com/" target="_blank">
+        <a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener">
           Gatsby.js
         </a>
       </div>
