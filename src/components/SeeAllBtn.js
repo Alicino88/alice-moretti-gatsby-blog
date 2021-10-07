@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 const SeeAllBtn = () => {
   return (
     <Wrapper>
-      <Link to="/blogs" style={{ "text-decoration": "none" }}>
+      <Link to="/blogs" style={{ textDecoration: "none" }}>
         <button className="btn-style">
           <p className="see-all-text">see all</p>
           <FiArrowRight className="arrow-style" />

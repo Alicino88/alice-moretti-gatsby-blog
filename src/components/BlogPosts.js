@@ -53,7 +53,6 @@ const BlogPosts = () => {
               <GatsbyImage
                 image={pathToImage}
                 alt={blog.picture.title}
-                style={{ "border-radius": "5px" }}
                 className="blog-img"
               ></GatsbyImage>
               <div className="text-container">
@@ -95,6 +94,7 @@ const BlogPosts = () => {
 const Wrapper = styled.section`
   .blog-img {
     width: 100%;
+    border-radius: 5px;
   }
 
   .text-container {
