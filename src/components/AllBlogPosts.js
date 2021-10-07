@@ -11,8 +11,8 @@ const AllBlogPosts = ({ blogs }) => {
         {blogs.map(blog => {
           const pathToImage = getImage(blog.picture)
           return (
-            <Link to={`/${blog.slug}`} className="link">
-              <article className="article-container" key={blog.title}>
+            <Link to={`/${blog.slug}`} className="link" key={blog.title}>
+              <article className="article-container">
                 <GatsbyImage
                   image={pathToImage}
                   placeholder="blurred"
