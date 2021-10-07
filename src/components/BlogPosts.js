@@ -23,6 +23,7 @@ const query = graphql`
           textPreview
         }
         picture {
+          title
           gatsbyImageData(
             layout: CONSTRAINED
             placeholder: BLURRED
@@ -47,18 +48,22 @@ const BlogPosts = () => {
       {blogs.map(blog => {
         const pathToImage = getImage(blog.picture)
         return (
-          <Wrapper>
+          <Wrapper key={blog.title}>
             <article className="article-container">
               <GatsbyImage
                 image={pathToImage}
-                alt="data travelling"
+                alt={blog.picture.title}
                 style={{ "border-radius": "5px" }}
                 className="blog-img"
               ></GatsbyImage>
               <div className="text-container">
                 <div className="topic-container">
                   {blog.topics.map(topic => {
-                    return <button className="btn-topic">{topic}</button>
+                    return (
+                      <button className="btn-topic" key={topic}>
+                        {topic}
+                      </button>
+                    )
                   })}
                 </div>
 

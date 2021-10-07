@@ -12,7 +12,7 @@ const AllBlogPosts = ({ blogs }) => {
           const pathToImage = getImage(blog.picture)
           return (
             <Link to={`/${blog.slug}`} className="link">
-              <article className="article-container">
+              <article className="article-container" key={blog.title}>
                 <GatsbyImage
                   image={pathToImage}
                   placeholder="blurred"
