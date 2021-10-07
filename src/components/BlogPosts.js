@@ -41,7 +41,7 @@ const BlogPosts = () => {
   const {
     allContentfulBlog: { nodes: blogs },
   } = data
-  console.log(blogs)
+  //console.log(blogs)
 
   return (
     <div>

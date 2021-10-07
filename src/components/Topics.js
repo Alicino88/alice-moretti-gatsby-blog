@@ -18,7 +18,7 @@ const Topics = () => {
   const {
     allContentfulBlog: { nodes: blogs },
   } = data
-  console.log(blogs)
+  //console.log(blogs)
   /*setupTopics function is defined in the utils folder. It adds all the topics to an array (allTopics) 
   and then removes the duplicates by first creating a set and then convert it into an array.
   https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/*/

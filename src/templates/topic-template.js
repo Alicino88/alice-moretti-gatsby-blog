@@ -7,7 +7,7 @@ import AllBlogPosts from "../components/AllBlogPosts"
 import { graphql } from "gatsby"
 
 const TopicTemplate = props => {
-  console.log(props)
+  //console.log(props)
   const {
     data: {
       allContentfulBlog: { nodes: blogs },

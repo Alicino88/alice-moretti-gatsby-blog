@@ -5,9 +5,9 @@ const setupTopics = blogs => {
       allTopics.push(topic)
     })
   })
-  console.log(allTopics)
+  //console.log(allTopics)
   const newTopics = [...new Set(allTopics)]
-  console.log(newTopics)
+  //console.log(newTopics)
   return newTopics
 }
 

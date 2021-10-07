@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   const toggle = () => {
     setIsOpen(!isOpen)
   }
-  console.log(isOpen)
+  //console.log(isOpen)
   return (
     <div>
       <Navbar toggle={toggle} />

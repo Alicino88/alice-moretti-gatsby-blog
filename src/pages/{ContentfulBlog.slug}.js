@@ -26,7 +26,7 @@ import Layout from "../components/Layout"
 //when creating a page programmatically using gatsby file system route API
 //gatsby passes all the data as props. We can see this data by console log them.
 const SingleBlog = props => {
-  console.log(props)
+  //console.log(props)
 
   //you need to pass to renderRichText function not the raw object itself but the piece that contains it!
   const content = props.data.contentfulBlog.content
@@ -53,8 +53,8 @@ const SingleBlog = props => {
       [BLOCKS.PARAGRAPH]: (node, children) => <Paragraph>{children}</Paragraph>,
       //Embedded_asset are the pictures contained inside the blog
       [BLOCKS.EMBEDDED_ASSET]: node => {
-        console.log(node)
-        console.log(node.data.target.fixed.src)
+        //(node)
+        //console.log(node.data.target.fixed.src)
         return (
           <div className="picture-container">
             <img src={node.data.target.fixed.src} className="blog-pic" />
