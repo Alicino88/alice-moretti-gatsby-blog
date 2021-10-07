@@ -13,6 +13,7 @@ const Error = () => {
               placeholder="blurred"
               layout="fixed"
               src="../assets/images/owl.png"
+              alt="owl"
             />
             <h2 className="h2-style">Oops...</h2>
           </div>
