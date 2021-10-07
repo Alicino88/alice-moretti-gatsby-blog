@@ -25,6 +25,7 @@ const Wrapper = styled.footer`
     font-size: 0.9rem;
     font-weight: 300;
     color: hsla(0, 0%, 24%, 1);
+    margin-top: 60px;
   }
 
   span {
