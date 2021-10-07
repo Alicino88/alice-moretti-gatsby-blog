@@ -12,6 +12,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 //By creating the page {ContentfulBlog.slug}.js Gatsby creates automatically a page for each slug
 //file system route API has been used for this https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
@@ -71,14 +72,20 @@ const SingleBlog = props => {
     },
   }
 
+  //{`${title}` | "by Alice Moretti"}
   //renderRichText takes as arguments the object containing the object with the raw content
   //and the options defining styles and additional assets such as pictures
   const blog = renderRichText(content, options)
   const title = props.data.contentfulBlog.title
+  const metaDescription = props.data.contentfulBlog.metaDescription
   const date = props.data.contentfulBlog.date
   const pathToImage = getImage(props.data.contentfulBlog.picture)
   return (
     <Layout>
+      <SEO
+        title={`${title}` + " | by Alice Moretti"}
+        description={metaDescription}
+      />
       <Wrapper>
         <div>
           <div className="header-background"></div>
@@ -115,6 +122,7 @@ export const query = graphql`
         gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
       }
       title
+      metaDescription
       contentful_id
       date(formatString: "MMMM Do, YYYY")
       content {

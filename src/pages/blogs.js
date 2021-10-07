@@ -18,13 +18,14 @@ import Title from "../components/Title"
 import Topics from "../components/Topics"
 import AllBlogPosts from "../components/AllBlogPosts"
 import { graphql } from "gatsby"
-
+import SEO from "../components/SEO"
 const Blogs = ({ data }) => {
   const {
     allContentfulBlog: { nodes: blogs },
   } = data
   return (
     <Layout>
+      <SEO title=" All Blogs | Alice Moretti" description="this is the blog" />
       <div>
         <Hero
           title="all blogs"

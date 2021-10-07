@@ -2,10 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
+import SEO from "../components/SEO"
 
 const Error = () => {
   return (
     <Layout>
+      <SEO title="Error" description="error page" />
       <Wrapper>
         <div className="text-container">
           <div className="owl-container">

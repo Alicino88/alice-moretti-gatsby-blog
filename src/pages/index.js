@@ -3,10 +3,15 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import BlogPosts from "../components/BlogPosts"
 import About from "../components/About"
+import SEO from "../components/SEO"
 
 export default function Home() {
   return (
     <Layout>
+      <SEO
+        title="Alice Moretti | Articles about Frontend Development"
+        description="this is the blog"
+      />
       <div>
         <Hero
           title="Hello visitor! Welcome to my blog"

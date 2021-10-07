@@ -5,6 +5,7 @@ import Title from "../components/Title"
 import Topics from "../components/Topics"
 import AllBlogPosts from "../components/AllBlogPosts"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 const TopicTemplate = props => {
   //console.log(props)
@@ -15,6 +16,7 @@ const TopicTemplate = props => {
   } = props
   return (
     <Layout>
+      <SEO />
       <div>
         <Hero
           title="all blogs"
