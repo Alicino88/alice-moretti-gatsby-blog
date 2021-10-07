@@ -24,7 +24,13 @@ const Hero = ({ title, subtitle, homePic, blogsPic }) => {
               <h3>{subtitle}</h3>
             </div>
             {homePic && (
-              <img src={picture} alt="girl coding" className="header-pic" />
+              <StaticImage
+                src="../assets/images/hp_pic2.png"
+                alt="girl coding"
+                className="header-pic"
+                placeholder="tracedSVG"
+                layout="fullWidth"
+              />
             )}
           </div>
         </div>
