@@ -18,9 +18,14 @@ const About = () => {
           layout="constrained"
           className="image-style"
         />
-        <p>
+        <p style={{ fontFamily: "Lato" }}>
           I am Alice, a{" "}
-          <a href="https://www.alicemoretti.com/" target="_blank">
+          <a
+            href="https://www.alicemoretti.com/"
+            target="_blank"
+            rel="noopener"
+            className="link-style"
+          >
             frontend developer
           </a>{" "}
           who enjoys writing about coding related topics
@@ -30,10 +35,17 @@ const About = () => {
             href="
     https://github.com/Alicino88?tab=repositories"
             target="_blank"
+            rel="noopener"
+            alt="gitHub icon"
           >
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/alicemoretti/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/alicemoretti/"
+            target="_blank"
+            rel="noopener"
+            alt="Linkedin icon"
+          >
             <FaLinkedin />
           </a>
         </div>
@@ -86,6 +98,12 @@ const Wrapper = styled.section`
     //The box-shadow property creates a rectangular shadow behind an element's entire box,
     //while the drop-shadow() filter function creates a shadow that conforms to the shape (alpha channel) of the image itself.
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .link-style {
+    color: hsl(206, 54%, 29%);
+    font-weight: bold;
+    text-decoration: none;
   }
 `
 
