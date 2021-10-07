@@ -11,7 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  console.log(result)
+  //console.log(result)
 
   //for each topic a page is created using the topic-template.js file as a base
   result.data.allContentfulBlog.distinct.forEach(topic => {
