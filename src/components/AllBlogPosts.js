@@ -17,6 +17,7 @@ const AllBlogPosts = ({ blogs }) => {
                   image={pathToImage}
                   placeholder="blurred"
                   className="picture-style"
+                  alt=""
                 />
                 <div className="text-container">
                   <h1 className="title-style">{blog.title}</h1>
