@@ -38,7 +38,7 @@ const SingleBlog = props => {
   const HeaderFour = ({ children }) => <h4 className="h4-style">{children}</h4>
   const Code = ({ children }) => (
     <pre>
-      <span className="code-style">{children}</span>
+      <code className="code-style">{children}</code>
     </pre>
   )
   const Bold = ({ children }) => <span className="bold-style">{children}</span>
