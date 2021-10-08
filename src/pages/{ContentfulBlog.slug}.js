@@ -40,7 +40,6 @@ const SingleBlog = props => {
   const Paragraph = ({ children }) => (
     <p className="paragraph-style">{children}</p>
   )
-  const Hyperlink = ({ children }) => <span target="_blank">{children}</span>
 
   const options = {
     renderMark: {
@@ -48,9 +47,9 @@ const SingleBlog = props => {
       [MARKS.BOLD]: text => <Bold>{text}</Bold>,
     },
     renderNode: {
-      [INLINES.ENTRY_HYPERLINK]: (node, children) => (
-        <Hyperlink>{children}</Hyperlink>
-      ),
+      //[INLINES.HYPERLINK]: (node, children) => (
+      // <a target="_blank">{children}</a>
+      //),
       [BLOCKS.HEADING_2]: (node, children) => <HeaderTwo>{children}</HeaderTwo>,
       [BLOCKS.HEADING_4]: (node, children) => (
         <HeaderFour>{children}</HeaderFour>
@@ -152,10 +151,14 @@ const Wrapper = styled.section`
     background-color: hsla(206, 20%, 80%, 0.5);
     height: 400px;
   }
+  p {
+    font-size: 1.2rem;
+  }
 
   @media (min-width: 330px) {
     .article-container {
       width: 85vw;
+      max-width: 680px;
       margin: 0 auto;
       margin-top: -250px;
     }
@@ -197,12 +200,6 @@ const Wrapper = styled.section`
     }
   }
 
-  @media (min-width: 1500px) {
-    .article-container {
-      width: 40vw;
-    }
-  }
-
   .title-style {
     border-left: 3px solid hsl(27, 41%, 72%);
     padding-left: 5px;
@@ -212,7 +209,7 @@ const Wrapper = styled.section`
   }
 
   .small-text {
-    font-family: "Lato";
+    font-family: "Lato", "Avant Garde", Sans-Serif;
     margin-bottom: 10px;
     font-size: 0.8rem;
   }
@@ -237,6 +234,10 @@ const Wrapper = styled.section`
   .blog-pic {
     margin: auto;
     width: 300px;
+  }
+
+  a {
+    color: hsla(0, 0%, 24%, 1);
   }
 `
 
