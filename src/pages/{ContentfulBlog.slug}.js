@@ -35,7 +35,11 @@ const SingleBlog = props => {
   //styling raw content:
   const HeaderTwo = ({ children }) => <h2 className="h2-style">{children}</h2>
   const HeaderFour = ({ children }) => <h4 className="h4-style">{children}</h4>
-  const Code = ({ children }) => <span className="code-style">{children}</span>
+  const Code = ({ children }) => (
+    <pre>
+      <span className="code-style">{children}</span>
+    </pre>
+  )
   const Bold = ({ children }) => <span className="bold-style">{children}</span>
   const Paragraph = ({ children }) => (
     <p className="paragraph-style">{children}</p>
