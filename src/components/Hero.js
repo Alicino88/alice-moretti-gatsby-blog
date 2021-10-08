@@ -92,7 +92,12 @@ const Wrapper = styled.section`
   }
 
   .header-pic {
-    display: none;
+    display: block;
+    width: 300px;
+    position: absolute;
+    right: 40px;
+    bottom: 0px;
+    z-index: -1;
   }
 
   @media (min-width: 768px) {
