@@ -99,14 +99,14 @@ p {
 /*MAIN CONTAINER HP*/
 
 .main-container {
-  margin-top: 70vh;
+  margin-top: 65vh;
   padding: 2rem 1rem;
 }
 @media (min-width: 700px) {
   .main-container {
     padding: 2rem 5rem;
     margin: auto;
-    margin-top: 70vh;
+    margin-top: 65vh;
   }
 }
 

@@ -47,7 +47,7 @@ const BlogPosts = () => {
     <div>
       <h2
         className="h2-style"
-        style={{ margin: "-30px 0 20px 0", fontSize: "2rem" }}
+        style={{ margin: "0px 0 20px 0", fontSize: "2rem" }}
       >
         Featured blogs
       </h2>

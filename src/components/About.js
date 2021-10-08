@@ -57,7 +57,7 @@ const About = () => {
 const Wrapper = styled.section`
   .aboutContainer {
     text-align: center;
-    padding: 0 2.3rem;
+    padding: 1.5rem 2.3rem;
     width: 320px;
     margin: auto;
   }
