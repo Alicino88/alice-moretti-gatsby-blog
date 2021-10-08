@@ -13,6 +13,7 @@ import styled from "styled-components"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import { StaticImage } from "gatsby-plugin-image"
 
 //By creating the page {ContentfulBlog.slug}.js Gatsby creates automatically a page for each slug
 //file system route API has been used for this https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/
@@ -94,12 +95,32 @@ const SingleBlog = props => {
           <div className="header-background"></div>
           <article className="article-container">
             <h1 className="title-style">{title}</h1>
-            <p className="small-text">{date}</p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                margin: "30px 0 30px 0",
+              }}
+            >
+              <StaticImage
+                src="../assets/images/alice_moretti.png"
+                alt="Alice Moretti"
+                placeholder="blurred"
+                layout="fullWidth"
+                className="avatar-style"
+              />
+
+              <p className="small-text avatar-text">
+                <span style={{ fontWeight: "bold" }}>Alice Moretti &nbsp;</span>{" "}
+                {date}
+              </p>
+            </div>
             <GatsbyImage
               className="blog-main-picture"
               image={pathToImage}
               alt=""
             />
+
             <div>{blog}</div>
           </article>
         </div>
@@ -156,6 +177,28 @@ const Wrapper = styled.section`
     height: 400px;
   }
 
+  .avatar-style {
+    width: 40px;
+  }
+
+  .title-style {
+    border-left: 3px solid hsl(27, 41%, 72%);
+    padding-left: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .small-text {
+    font-family: "Lato", "Avant Garde", Sans-Serif;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+  }
+
+  .avatar-text {
+    margin: 0 0 0 10px;
+  }
+
   @media (min-width: 330px) {
     .article-container {
       width: 85vw;
@@ -205,20 +248,6 @@ const Wrapper = styled.section`
     .article-container {
       width: 45vw;
     }
-  }
-
-  .title-style {
-    border-left: 3px solid hsl(27, 41%, 72%);
-    padding-left: 5px;
-    font-size: 1.6rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .small-text {
-    font-family: "Lato", "Avant Garde", Sans-Serif;
-    margin-bottom: 10px;
-    font-size: 0.8rem;
   }
 
   //Raw content style:
