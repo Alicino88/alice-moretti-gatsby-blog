@@ -28,7 +28,7 @@ const About = () => {
           >
             frontend developer
           </a>{" "}
-          who enjoys writing about coding related topics
+          based in Helsinki. I love coding and writing about it.
         </p>
         <div className="icon-container">
           <a

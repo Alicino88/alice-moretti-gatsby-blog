@@ -75,7 +75,8 @@ const Wrapper = styled.section`
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    font-weight: bold;
     line-height: 43px;
     text-transform: uppercase;
     color: #3e3e3e;
@@ -96,7 +97,7 @@ const Wrapper = styled.section`
 
   @media (min-width: 768px) {
     .text-container {
-      width: 70%;
+      width: 50%;
     }
     .header-pic {
       display: block;

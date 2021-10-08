@@ -14,8 +14,8 @@ export default function Home() {
       />
       <div>
         <Hero
-          title="Hello visitor! Welcome to my blog"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          title="Hello visitor!"
+          subtitle="Welcome to my digital corner, a blog where I write about frontend development."
           homePic
         />
         <div className="main-container">
