@@ -63,7 +63,7 @@ const Wrapper = styled.section`
   .sidebar-links {
     display: block;
     text-decoration: none;
-    font-family: Lato;
+    font-family: Lato, "Avant Garde", Sans-Serif;
     color: hsl(206 54% 29%);
     font-size: 2rem;
     margin-bottom: 1.5rem;

@@ -34,7 +34,7 @@ const Wrapper = styled.section`
   }
 
   .see-all-text {
-    font-family: Lato;
+    font-family: Lato, "Avant Garde", Sans-Serif;
     font-size: 1rem;
     text-transform: uppercase;
 

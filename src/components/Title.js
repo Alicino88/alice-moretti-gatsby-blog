@@ -19,7 +19,7 @@ const Wrapper = styled.section`
     text-align: center;
   }
   .title-style {
-    font-family: Lato;
+    font-family: Lato, "Avant Garde", Sans-Serif;
     font-size: 36px;
     background-color: #ffff;
     padding: 0 0.5rem;

@@ -54,7 +54,7 @@ const Wrapper = styled.section`
   .nav-link {
     text-transform: uppercase;
     margin-right: 2rem;
-    font-family: Lato;
+    font-family: Lato, "Avant Garde", Sans-Serif;
     color: #3e3e3e;
     text-decoration: none;
   }

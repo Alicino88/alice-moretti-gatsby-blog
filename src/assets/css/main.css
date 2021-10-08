@@ -23,7 +23,7 @@
 
 h1 {
   color: hsl(206 54% 29%);
-  font-family: Lato;
+  font-family: Lato, "Avant Garde", Sans-Serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.2rem;
@@ -37,16 +37,16 @@ h1 {
 }
 
 .h4-style {
-  font-family: Lato;
+  font-family: Lato, "Avant Garde", Sans-Serif;
   font-size: 1.2rem;
   color: hsla(0, 0%, 24%, 1);
 }
 
 p {
-  font-family: Playfair Display;
+  font-family: Playfair Display, "Didot", serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 30px;
   color: hsla(0, 0%, 24%, 1);
 }
@@ -56,7 +56,7 @@ p {
   cursor: pointer;
 }
 .continue-reading-text {
-  font-family: Lato;
+  font-family: Lato, "Avant Garde", Sans-Serif;
   font-style: normal;
   font-weight: 600;
   font-size: 0.9rem;
@@ -88,7 +88,7 @@ p {
 }
 
 .date {
-  font-family: Lato;
+  font-family: Lato, "Avant Garde", Sans-Serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;

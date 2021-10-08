@@ -21,7 +21,7 @@ const Wrapper = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Lato;
+    font-family: Lato, "Avant Garde", Sans-Serif;
     font-size: 0.9rem;
     font-weight: 300;
     color: hsla(0, 0%, 24%, 1);
@@ -35,6 +35,7 @@ const Wrapper = styled.footer`
   a {
     text-decoration: none;
     font-weight: bold;
+    color: hsla(0, 0%, 24%, 1);
   }
 
   a:visited {

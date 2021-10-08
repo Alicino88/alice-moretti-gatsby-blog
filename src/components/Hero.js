@@ -83,7 +83,7 @@ const Wrapper = styled.section`
   }
 
   h3 {
-    font-family: Playfair Display;
+    font-family: Playfair Display, "Didot", serif;
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 40px;
