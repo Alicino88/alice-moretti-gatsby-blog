@@ -20,7 +20,7 @@ const TopicTemplate = props => {
       <div>
         <Hero
           title="all blogs"
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+          subtitle="Writing is a great way to understand whether you have actually understood!"
           blogsPic
         />
         <div className="main-container-blogs">
