@@ -155,9 +155,6 @@ const Wrapper = styled.section`
     background-color: hsla(206, 20%, 80%, 0.5);
     height: 400px;
   }
-  p {
-    font-size: 1.2rem;
-  }
 
   @media (min-width: 330px) {
     .article-container {
@@ -174,19 +171,22 @@ const Wrapper = styled.section`
     .code-style {
       display: block;
       font-weight: 300;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-family: Source Code Pro;
       background-color: hsla(206, 20%, 80%, 0.23);
-      padding: 20px 50px 20px 20px;
+      padding: 20px 30px 20px 20px;
       line-height: 1.3;
       margin-top: 15px;
       margin-bottom: 15px;
+      //Properties necessary so that the code doesn't overflow the container
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
     }
   }
 
   @media (min-width: 520px) {
     .code-style {
-      padding: 20px 150px 20px 20px;
+      padding: 20px 100px 20px 20px;
     }
   }
   @media (min-width: 800px) {
@@ -195,6 +195,9 @@ const Wrapper = styled.section`
     }
     .blog-main-picture {
       height: 400px;
+    }
+    p {
+      font-size: 1.2rem;
     }
   }
 
