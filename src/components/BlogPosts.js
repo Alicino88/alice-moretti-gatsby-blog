@@ -45,11 +45,17 @@ const BlogPosts = () => {
 
   return (
     <div>
+      <h2
+        className="h2-style"
+        style={{ margin: "-30px 0 20px 0", fontSize: "2rem" }}
+      >
+        Featured blogs
+      </h2>
       {blogs.map(blog => {
         const pathToImage = getImage(blog.picture)
         return (
-          <Wrapper key={blog.title}>
-            <article className="article-container">
+          <Wrapper>
+            <article className="article-container" key={blog.title}>
               <GatsbyImage
                 image={pathToImage}
                 alt={blog.picture.title}
@@ -92,6 +98,14 @@ const BlogPosts = () => {
 }
 
 const Wrapper = styled.section`
+  .opening-text {
+    font-family: Lato, "Avant Garde", Sans-Serif;
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: hsla(206, 54%, 29%, 1);
+  }
+
   .blog-img {
     width: 100%;
     border-radius: 5px;
