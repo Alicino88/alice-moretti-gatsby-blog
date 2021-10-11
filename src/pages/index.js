@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       <SEO
         title="Alice Moretti | Articles about Frontend Development"
-        description="this is the blog"
+        description="Welcome to my digital garden, a blog where I write about frontend development."
       />
       <div>
         <Hero

@@ -25,7 +25,10 @@ const Blogs = ({ data }) => {
   } = data
   return (
     <Layout>
-      <SEO title=" All Blogs | Alice Moretti" description="this is the blog" />
+      <SEO
+        title=" All Blogs | Alice Moretti"
+        description="My articles on frontend development grouped by topic."
+      />
       <div>
         <Hero
           title="all blogs"
