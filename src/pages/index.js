@@ -18,7 +18,7 @@ export default function Home() {
           subtitle="Welcome to my digital corner, a blog where I write about frontend development."
           homePic
         />
-        <div className="main-container">
+        <div className="main-container" role="main">
           {/*BlogPosts contains StaticQuery to fetch the 3 featured blog posts */}
 
           <BlogPosts />

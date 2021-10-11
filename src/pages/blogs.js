@@ -32,7 +32,7 @@ const Blogs = ({ data }) => {
           subtitle="Writing is a great way to understand whether you have actually understood!"
           blogsPic
         />
-        <div className="main-container-blogs">
+        <div className="main-container-blogs" role="main">
           <Title />
           <Topics />
           <AllBlogPosts blogs={blogs} />

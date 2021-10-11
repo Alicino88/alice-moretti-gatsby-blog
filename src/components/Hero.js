@@ -19,10 +19,10 @@ const Hero = ({ title, subtitle, homePic, blogsPic }) => {
         )}
         <div className="header-center">
           <div>
-            <div className="text-container">
+            <section role="banner" className="text-container">
               <h1>{title}</h1>
-              <h3>{subtitle}</h3>
-            </div>
+              <h2>{subtitle}</h2>
+            </section>
             {homePic && (
               <StaticImage
                 src="../assets/images/hp_pic2.png"
@@ -83,7 +83,7 @@ const Wrapper = styled.section`
     margin-bottom: 20px;
   }
 
-  h3 {
+  h2 {
     font-family: Playfair Display, "Didot", serif;
     font-weight: normal;
     font-size: 1.5rem;
