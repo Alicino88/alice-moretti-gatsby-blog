@@ -9,7 +9,7 @@ const SideBar = ({ toggle, isOpen }) => {
       showSidebar is also applied*/
     <Wrapper>
       <aside className={`sidebar ${isOpen ? "showSidebar" : ""}`}>
-        <button className="close-btn" onClick={toggle}>
+        <button aria-label="Close" className="close-btn" onClick={toggle}>
           <IoMdClose />
         </button>
         <div className="sidebar-container">

@@ -37,6 +37,7 @@ const About = () => {
             target="_blank"
             rel="noopener"
             alt="gitHub icon"
+            aria-label="Github profile"
           >
             <FaGithub />
           </a>
@@ -45,6 +46,7 @@ const About = () => {
             target="_blank"
             rel="noopener"
             alt="Linkedin icon"
+            aria-label="Linkedin profile"
           >
             <FaLinkedin />
           </a>

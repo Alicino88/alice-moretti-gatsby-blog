@@ -91,7 +91,7 @@ const BlogPosts = () => {
                 <Link to={`/${blog.slug}`} className="link">
                   <div className="continue-reading-container">
                     <p className="continue-reading-text">Continue reading</p>
-                    <button className="btn-arrow">
+                    <button className="btn-arrow" aria-label="Continue reading">
                       <FiArrowRight />
                     </button>
                   </div>

@@ -18,12 +18,12 @@ const Navbar = ({ toggle }) => {
               className="nav-link"
               activeClassName="active-link"
             >
-              All blogs
+              Blog
             </Link>
           </div>
           {/*when clicking on the button, the toggle function is fired. This function, defined inside the 
           Layout component toggles between open and close state for the SideBar. */}
-          <button className="nav-btn" onClick={toggle}>
+          <button aria-label="Open menu" className="nav-btn" onClick={toggle}>
             <FiAlignJustify />
           </button>
         </div>
@@ -60,7 +60,7 @@ const Wrapper = styled.section`
   }
 
   .active-link {
-    border-bottom: 4px solid #d4b499;
+    border-bottom: 4px solid #b28f70;
     padding-bottom: 5px;
   }
 

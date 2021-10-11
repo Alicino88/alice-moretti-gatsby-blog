@@ -25,7 +25,7 @@ const AllBlogPosts = ({ blogs }) => {
                   <p>{blog.textPreview.textPreview}</p>
                   <div className="continue-reading-container">
                     <p className="continue-reading-text">Continue reading</p>
-                    <button className="btn-arrow">
+                    <button className="btn-arrow" aria-label="Continue reading">
                       <FiArrowRight />
                     </button>
                   </div>
