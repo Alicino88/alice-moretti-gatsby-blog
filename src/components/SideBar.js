@@ -32,7 +32,7 @@ const Wrapper = styled.section`
     width: 100%;
     height: 100%;
     background: #ffff;
-    transition: all 0.3s linear;
+    transition: all 0.6s ease-in;
     display: grid;
     padding-left: 2rem;
     z-index: 999;
