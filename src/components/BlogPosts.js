@@ -65,12 +65,19 @@ const BlogPosts = () => {
                 image={pathToImage}
                 alt={blog.picture.title}
                 className="blog-img"
+                layout="fullWidth"
+                placeholder="blurred"
+                layout="constrained"
               ></GatsbyImage>
               <div className="text-container">
                 <div className="topic-container">
                   {blog.topics.map(topic => {
                     return (
-                      <button className="btn-topic" key={topic}>
+                      <button
+                        className="btn-topic"
+                        key={topic}
+                        style={{ cursor: "default" }}
+                      >
                         {topic}
                       </button>
                     )
