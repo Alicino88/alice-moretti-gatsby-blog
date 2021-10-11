@@ -64,9 +64,16 @@ const SingleBlog = props => {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         //(node)
         //console.log(node.data.target.fixed.src)
+        console.log(node.data.target.gatsbyImageData)
         return (
           <div className="picture-container">
-            <img src={node.data.target.fixed.src} className="blog-pic" alt="" />
+            <GatsbyImage
+              image={node.data.target.gatsbyImageData}
+              className="blog-pic"
+              alt=""
+              placeholder="blurred"
+              layout="constrained"
+            />
             <p className="small-text" style={{ textAlign: "center" }}>
               {node.data.target.description}
             </p>
@@ -158,6 +165,7 @@ export const query = graphql`
             __typename
             title
             description
+            gatsbyImageData
             fixed {
               src
               srcSet
@@ -269,7 +277,6 @@ const Wrapper = styled.section`
   }
   .blog-pic {
     margin: auto;
-    width: 300px;
   }
 
   a {
