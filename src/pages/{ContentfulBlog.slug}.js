@@ -190,7 +190,7 @@ const Wrapper = styled.section`
   }
 
   .title-style {
-    border-left: 3px solid hsl(27, 41%, 72%);
+    border-left: 3px solid hsl(28, 30%, 57%);
     padding-left: 5px;
     font-size: 1.6rem;
     font-weight: bold;
