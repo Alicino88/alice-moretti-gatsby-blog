@@ -64,7 +64,7 @@ const SingleBlog = props => {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         //(node)
         //console.log(node.data.target.fixed.src)
-        console.log(node.data.target.gatsbyImageData)
+        //console.log(node.data.target.gatsbyImageData)
         return (
           <div className="picture-container">
             <GatsbyImage
