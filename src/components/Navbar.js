@@ -20,6 +20,15 @@ const Navbar = ({ toggle }) => {
             >
               Blog
             </Link>
+            <a
+              href="https://www.alicemoretti.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+              style={{ color: "hsl(206, 54%, 29%)" }}
+            >
+              work website
+            </a>
           </div>
           {/*when clicking on the button, the toggle function is fired. This function, defined inside the 
           Layout component toggles between open and close state for the SideBar. */}
