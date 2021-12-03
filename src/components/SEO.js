@@ -7,7 +7,8 @@ const SEO = ({ title, description, image }) => {
     <Helmet
       htmlAttributes={{ lang: "en" }}
       title={title}
-      meta={[{ name: `description`, content: description, image: image }]}
+      meta={[{ name: `description`, content: description }]}
+      meta={[{ name: `image`, content: image }]}
     ></Helmet>
   )
 }
