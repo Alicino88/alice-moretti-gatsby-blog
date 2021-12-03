@@ -111,7 +111,7 @@ const SingleBlog = props => {
             >
               <StaticImage
                 src="../assets/images/alice_moretti.png"
-                alt="Alice Moretti"
+                alt=""
                 placeholder="blurred"
                 layout="fullWidth"
                 className="avatar-style"
