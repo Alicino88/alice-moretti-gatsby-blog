@@ -96,6 +96,7 @@ const SingleBlog = props => {
       <SEO
         title={`${title}` + " | by Alice Moretti"}
         description={metaDescription}
+        image={pathToImage}
       />
       <Wrapper>
         <div>
